@@ -102,3 +102,27 @@ except CalledProcessError as e:
 
 
 ___________________________________________
+
+
+#🧪 Pasos para levantar DOCKER todo:
+1. Asegúrate de que no haya contenedores/volúmenes antiguos (si ya probaste antes):
+bash
+```
+docker-compose down -v  # ¡Esto borra la base de datos!
+```
+2. Construye e inicia:
+bash
+```
+docker-compose up --build
+```
+3. En otra terminal, aplica migraciones:
+```
+docker-compose exec backend python manage.py migrate
+```
+4. (Opcional) Crea un superusuario:
+```
+docker-compose exec backend python manage.py createsuperuser
+```
+Accede a:
+Backend (API o admin): http://localhost:8000/admin/
+Frontend: http://localhost:5173
