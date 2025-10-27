@@ -104,7 +104,7 @@ except CalledProcessError as e:
 ___________________________________________
 
 
-#🧪 Pasos para levantar DOCKER todo:
+## 🧪 Pasos para levantar DOCKER todo:
 1. Asegúrate de que no haya contenedores/volúmenes antiguos (si ya probaste antes):
 bash
 ```
@@ -123,6 +123,3 @@ docker-compose exec backend python manage.py migrate
 ```
 docker-compose exec backend python manage.py createsuperuser
 ```
-Accede a:
-Backend (API o admin): http://localhost:8000/admin/
-Frontend: http://localhost:5173
